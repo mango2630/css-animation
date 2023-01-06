@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 70%;
+            border: 2px solid red;
+            /* 相对定位：相对自己原本位置！ */
+            position: relative;
+        }
+        .left{
+            width: 300px;
+            background-color: rgba(217, 255, 0, 0.815);
+            height: 300px;
+            /* 设置绝对定位 */
+            position: absolute;
+            left: 0px;
+        }
+        .right{
+            background-color: rgba(137, 43, 226, 0.952);
+            height: 500px;
+
+            /* way1: */
+            /* margin-left: 300px; */
+
+
+            /* way2: [需要清除浮动]*/
+            position: absolute;
+            left: 300px;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">定宽左部分</div>
+        <div class="right">自适应右部分</div>
+    </div>
+</body>
+</html>

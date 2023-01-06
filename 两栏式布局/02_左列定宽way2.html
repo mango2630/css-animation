@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 70%;
+            border: 2px solid red;
+        }
+        .left{
+            width: 300px;
+            background-color: rgba(217, 255, 0, 0.815);
+            height: 300px;
+            float: left;
+        }
+        .right{
+            background-color: rgba(137, 43, 226, 0.952);
+            height: 500px;
+            /* 触发BFC：环绕浮动元素！ */
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">定宽左部分</div>
+        <div class="right">自适应右部分</div>
+    </div>
+</body>
+</html>

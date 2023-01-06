@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            width: 60px;
+            height: 30px;
+            border: 1px solid red;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        var oTb = document.querySelector("table");
+        var oTbody = oTb.tBodies[0];
+
+        for(var i = 0; i < 9; i ++){
+            var oR = oTbody.insertRow(i);
+            for(var j = 0; j <= i; j ++){
+                var oT = oR.insertCell(j); // 为表格头的指定位置添加一个新的行tr 
+                oT.innerHTML = `${j+1}*${i+1}=${(j+1)*(i+1)}`;
+            }
+        }
+    </script>
+</body>
+</html>

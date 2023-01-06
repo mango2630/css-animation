@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 640px;
+    height: 452px;
+    border: 5px solid bisque;
+    margin: 100px auto;
+    position: relative;
+}
+.box > .main > img {
+    /* 脱离文档流，显示的为最后一张 */
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+}
+.box .main img.current{
+    /* 让第一张图显示 */
+    display: block;
+}
+
+/* 按钮 */
+.box .btns div{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    top: 50%;
+
+    width: 60px;
+    height: 40px;
+    background-color: rgb(80, 85, 85);
+    line-height: 40px;
+    text-align: center;
+    
+    margin-top: -20px;
+}
+.last{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+
+/* 小圆点 */
+ol{
+    list-style: none;
+}
+.circle{
+    width: 250px;
+    height: 20px;
+    background-color: rgba(80, 85, 85, 0.37);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -125px;
+}
+.circle ol li{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 10px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.circle ol li.current{
+    background-color: rgba(255, 217, 0, 0.466);
+}

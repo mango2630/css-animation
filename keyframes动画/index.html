@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 255, 98);
+            border-radius: 100%;
+            animation: move 2s;
+            animation-timing-function: linear;
+            /* animation-delay: 3s; */
+
+            /* 动画播放次数 */
+            animation-iteration-count: 3;
+            /* animation-iteration-count: infinite; */
+
+            /* 动画播放方向 */
+            animation-direction: alternate;
+
+            /* 动画运动完状态 */
+            animation-fill-mode: forwards;
+
+            /* 控制动画的播放与暂停 */
+            animation-play-state: running;
+        }
+        @keyframes move {
+            from{
+                transform: translate(0px);
+            }to{
+                transform: translate(300px);
+            }
+        }
+        /* @keyframes xx {
+            0%{
+
+            }100%{
+                
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

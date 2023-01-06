@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: goldenrod;
+            transition: width 2s;
+        }
+        div:hover{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        transition 属性是一个简写属性，用于设置四个过渡属性：
+            transition-property 规定设置过渡效果的 CSS 属性的名称。
+            transition-duration 规定完成过渡效果需要多少秒或毫秒。
+            transition-timing-function 规定速度效果的速度曲线。
+                - linear	规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
+                - ease	规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
+                - ease-in	规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
+                - ease-out	规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+                - ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
+                - cubic-bezier(n,n,n,n)
+            transition-delay 定义过渡效果何时开始。
+
+        1. 默认值： all 0 ease 0
+    -->
+    <div></div>
+</body>
+</html>

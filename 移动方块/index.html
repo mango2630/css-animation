@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            position: absolute;
+            top: 300px;
+            left: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var oDiv = document.querySelector("div");
+        oDiv.l = false;
+        oDiv.r = false;
+        oDiv.t = false;
+        oDiv.b = false;
+
+        document.onkeydown = function () {
+            switch(event.keyCode) {
+                case 37: oDiv.l = true; break;
+                case 38: oDiv.t = true; break;
+                case 39: oDiv.r = true; break;
+                case 40: oDiv.b = true; break;
+            }
+        }
+        document.onkeyup = function() {
+            switch(event.keyCode) {
+                case 37: oDiv.l = false; break;
+                case 38: oDiv.t = false; break;
+                case 39: oDiv.r = false; break;
+                case 40: oDiv.b = false; break;
+            }
+        }
+
+        setInterval(function() {
+            if (oDiv.l) {
+                oDiv.style.left = oDiv.offsetLeft - 2 + "px";
+            }
+            if (oDiv.t) {
+                oDiv.style.top = oDiv.offsetTop - 2 + "px";
+            }
+            if (oDiv.b) {
+                oDiv.style.top = oDiv.offsetTop + 2 + "px";
+            }
+            if (oDiv.r) {
+                oDiv.style.left = oDiv.offsetLeft + 2 + "px";
+            }
+        }, 40)
+    </script>
+</body>
+</html>
